@@ -9,27 +9,33 @@ print('Task 1')
 # P.S. На екран має бути виведено лише одне повідомлення, якщо вік користувача містить цифру тільки відповідне
 # повідомлення! Також подумайте над варіантами, коли введені невірні або неадекватні (неможливі) дані.
 
+
 age = ''
 while not age:  # сделал так чтоб пользователь в любом случае что-то вводил в строку ввода, не оставлял ее пустой
     age = input('Please, tell us your age: ')
-if int(age) <= 0 or int(age) > 105:
-    print('Are you even a human ?))')
 
-elif int(age) < 6:
-    print('Where are your parents?')
-
-elif int(age) < 16:
-    print('This movie for adults only!')
-    if '7' in age:  # решил сделать вложенный if с цифрой 7 ибо возраст 7, 17, ..., 67 попадают сразу под 2 условия
-        print('And you`re gonna get lucky!')
-
-elif int(age) > 65:
-    print('Please show us your pensioner`s ID!')
-    if '7' in age:
-        print('And you`re gonna get lucky!')
-
+if not age.isdigit():
+    print('Try to use digits only!')
 else:
-    print('Unfortunately all tickets have run out!')
-    if '7' in age:
-        print('But you`re gonna get lucky!')
+    int_age = int(age)
+    if int_age <= 0 or int_age > 105:
+        print('Are you even a human ?))')
+
+    elif int_age < 6:
+        print('Where are your parents?')
+
+    elif int_age < 16:
+        print('This movie for adults only!')
+        if '7' in age:  # решил сделать вложенный if с цифрой 7 ибо возраст 7, 17, ..., 67 попадают сразу под 2 условия
+            print('And you`re gonna get lucky!')
+
+    elif int_age > 65:
+        print('Please show us your pensioner`s ID!')
+        if '7' in age:
+            print('And you`re gonna get lucky!')
+
+    else:
+        print('Unfortunately all tickets have run out!')
+        if '7' in age:
+            print('But you`re gonna get lucky!')
 
