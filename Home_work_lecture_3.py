@@ -21,7 +21,7 @@ if symbol[0] == '-':
 else:
     if symbol.isdigit():
         int_symbol = int(symbol)
-        if int(symbol) >= len(string):
+        if int_symbol >= len(string):
             print('Symbol number is out of string, try again!')
         else:
             print(f'The symbol {int_symbol} in {string} is "{string[int_symbol]}"')
