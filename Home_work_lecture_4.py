@@ -14,7 +14,7 @@ count = 0
 if not ''.join(lst).isalpha():
     print('Use letters, not digits!')
 else:
-    for word in lst:    # ["Яярик", "ты", "крУутой"]
+    for word in lst:
         for letter in word:
             count = count + 1 if letter in vowels else 0
             # if letter in vowels:
