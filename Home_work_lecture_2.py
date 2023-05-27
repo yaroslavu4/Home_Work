@@ -38,4 +38,3 @@ else:
         print('Unfortunately all tickets have run out!')
         if '7' in age:
             print('But you`re gonna get lucky!')
-
