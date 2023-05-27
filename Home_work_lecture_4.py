@@ -47,5 +47,26 @@ print('Task 2')
 # upper_limit = 37.339
 # > match: "x-store", "main-service"
 
+market_price = {
+    "cito": 47.999,
+    "BB_studio": 42.999,
+    "momo": 49.999,
+    "main-service": 37.245,
+    "buy.now": 38.324,
+    "x-store": 37.166,
+    "the_partner": 38.988,
+    "store": 37.720,
+    "rozetka": 38.003
+}
 
-low_limit, upp_limit = map(int, input().split())
+low_limit, upp_limit = map(float, input('Enter Lower and upper price limits through whitespace: ').split())
+match_list = []
+for name, price in market_price.items():
+    if low_limit <= price <= upp_limit:
+        match_list.append(name)
+
+print(f'There are {len(match_list)} shops that meet the range between set up prices:')
+# for name in match_list:
+#     print(name)
+for name in range(len(match_list)):
+    print(f'{name + 1}.{match_list[name]:_>25s}')
