@@ -17,10 +17,6 @@ else:
     for word in lst:
         for letter in word:
             count = count + 1 if letter in vowels else 0
-            # if letter in vowels:
-            #     count += 1
-            # else:
-            #     count = 0
             if count == 2:
                 vowels_list.append(word)
                 break
