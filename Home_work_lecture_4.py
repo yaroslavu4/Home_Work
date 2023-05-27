@@ -65,8 +65,8 @@ except Exception:
     print('Dont forget to use WhiteSpace between values !')
 else:
     print(f'There are {len(match_list)} shops that meet the range between set up prices:')
-    for name in range(len(match_list)):
-        print(f'{name + 1}.{match_list[name]:_>25s}')
+    for indx in range(len(match_list)):
+        print(f'{indx + 1}.{match_list[indx]:_>25s}')
 
 # Сначала сделал так, после решил попробовать через TRY EXCEPT
 # low_limit, upp_limit = map(float, input('Enter Lower and upper price limits through whitespace: ').split())
