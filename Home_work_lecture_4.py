@@ -64,5 +64,5 @@ for name, price in market_price.items():
 print(f'There are {len(match_list)} shops that meet the range between set up prices:')
 # for name in match_list:
 #     print(name)
-for name in range(len(match_list)):
-    print(f'{name + 1}.{match_list[name]:_>25s}')
+for indx in range(len(match_list)):
+    print(f'{indx + 1}.{match_list[indx]:_>25s}')
