@@ -48,3 +48,4 @@ print('Task 2')
 # > match: "x-store", "main-service"
 
 
+low_limit, upp_limit = map(int, input().split())
