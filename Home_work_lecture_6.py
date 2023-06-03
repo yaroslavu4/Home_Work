@@ -89,7 +89,7 @@ def my_age(age):
 
                                     # Основний код
 age = ''
-while not age:  # сделал так чтоб пользователь в любом случае что-то вводил в строку ввода, не оставлял ее пустой
+while not age:
     try:
         age = int(input('Please, tell us your age: '))
     except ValueError:
