@@ -91,9 +91,9 @@ def my_age(age):
 age = ''
 while not age:
     try:
-        age = int(input('Please, tell us your age: '))
+        age = int(input('Введіть ваш вік: '))
     except ValueError:
-        print('Try to use digits only!')
+        print('Використовуйте тільки цифри!')
         continue
     else:
         my_age(age)
