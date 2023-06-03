@@ -54,37 +54,49 @@ print('Task_3')
 # Task3:
 # Перепишіть за допомогою функцій вашу программу "Касир в кінотеатрі", яка буде виконувати наступне:
 # Попросіть користувача ввести свсвій вік.
+
+                                # Побудова функцій
+
+def my_years(age):
+    years = ''
+    if 2 <= age % 10 <= 4:
+        years = 'роки'
+    elif 5 <= age % 10 <= 9 or age % 10 == 0:
+        years = 'років'
+    else:
+        years = 'рік'
+    return years
+
+
+def my_age(age):
+    if age <= 0 or age > 105:
+        print(f'Вам {age} {my_years(age)}, ви взагалі людина?')
+    elif age < 7:
+        print(f'Тобі ж {age} {my_years(age)}! Де твої батьки?')
+    elif age < 16:
+        print(f'Тобі лише {age} {my_years(age)}, а це е фільм для дорослих!')
+        if '7' in str(age):
+            print(f'А також у твоєму віці є "7", вам пощастить')
+    elif age > 65:
+        print(f'Вам {age} {my_years(age)}? Покажіть пенсійне посвідчення!')
+        if '7' in str(age):
+            print(f'А також у вашому віці є "7", вам пощастить')
+    else:
+        print(f'Незважаючи на те, що вам {age} {my_years(age)}, білетів всеодно нема!')
+        if '7' in str(age):
+            print(f'Але у вашому віці є "7", вам пощастить')
+
+
+                                    # Основний код
 age = ''
 while not age:  # сделал так чтоб пользователь в любом случае что-то вводил в строку ввода, не оставлял ее пустой
-    age = input('Please, tell us your age: ')
-
-if not age.isdigit():
-    print('Try to use digits only!')
-else:
-    int_age = int(age)
-
-
-
-    if int_age <= 0 or int_age > 105:
-        print('Are you even a human ?))')
-
-    elif int_age < 6:
-        print('Where are your parents?')
-
-    elif int_age < 16:
-        print('This movie for adults only!')
-        if '7' in age:  # решил сделать вложенный if с цифрой 7 ибо возраст 7, 17, ..., 67 попадают сразу под 2 условия
-            print('And you`re gonna get lucky!')
-
-    elif int_age > 65:
-        print('Please show us your pensioner`s ID!')
-        if '7' in age:
-            print('And you`re gonna get lucky!')
-
+    try:
+        age = int(input('Please, tell us your age: '))
+    except ValueError:
+        print('Try to use digits only!')
+        continue
     else:
-        print('Unfortunately all tickets have run out!')
-        if '7' in age:
-            print('But you`re gonna get lucky!')
+        my_age(age)
 
 
 
