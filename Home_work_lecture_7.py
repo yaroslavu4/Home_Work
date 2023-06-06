@@ -1,7 +1,12 @@
 from random import choice
                                         # Побудова функцій
 
+# Артем, поясніть будь-ласка, може я щось не так розумію, бо у цій функції арг
 def my_choice():
+    '''
+
+    :return:
+    '''
     if user_choice == comp_choice:
         return 'Draw'
     elif user_choice == 'scissors':
@@ -22,6 +27,10 @@ def my_choice():
 
 
 def my_score():
+    '''
+
+    :return:
+    '''
     if my_choice() == 'Draw':
         score['user'] += 1
         score['computer'] += 1
@@ -33,6 +42,10 @@ def my_score():
 
 
 def final_message():
+    '''
+
+    :return:
+    '''
     if my_choice() == 'Draw':
         print(f'Your choice "{user_choice}" == computer choice "{comp_choice}", it`s a draw!')
     elif my_choice() == 'Win':
@@ -54,7 +67,6 @@ while True:
     user_choice = ''
     while not user_choice:
         user_choice = input('Enter one of three items rock, paper or scissors: ').lower()
-
     if user_choice not in ('rock', 'paper', 'scissors'):
         print(f'Unexpected data "{user_choice}", check the rules and try again!')
         continue
