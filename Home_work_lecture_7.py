@@ -1,11 +1,14 @@
 from random import choice
                                         # Побудова функцій
 
-# Артем, поясніть будь-ласка, може я щось не так розумію, бо у цій функції арг
-def my_choice():
+# якщо функція не приймає обов'язкових аргументів, чи маю я робити док стрінг з описом й що описувати в такому випадку?
+def my_choice(user_choice, comp_choice):
     '''
-
-    :return:
+    Args:
+        user_choice (str):
+        comp_choice (str):
+    Returns:
+        (str)
     '''
     if user_choice == comp_choice:
         return 'Draw'
@@ -26,29 +29,27 @@ def my_choice():
             return 'Win'
 
 
-def my_score():
+def my_score(score):
     '''
-
-    :return:
+    Args:
+        score (dict):
+    Returns:
+        score (dict)
     '''
-    if my_choice() == 'Draw':
+    if my_choice(user_choice, comp_choice) == 'Draw':
         score['user'] += 1
         score['computer'] += 1
-    elif my_choice() == 'Win':
+    elif my_choice(user_choice, comp_choice) == 'Win':
         score['user'] += 1
     else:
         score['computer'] += 1
     return score
 
-
+# якщо функція не приймає обов'язкових аргументів, чи маю я робити док стрінг з описом й що описувати в такому випадку?
 def final_message():
-    '''
-
-    :return:
-    '''
-    if my_choice() == 'Draw':
+    if my_choice(user_choice, comp_choice) == 'Draw':
         print(f'Your choice "{user_choice}" == computer choice "{comp_choice}", it`s a draw!')
-    elif my_choice() == 'Win':
+    elif my_choice(user_choice, comp_choice) == 'Win':
         print(f'Your choice is "{user_choice}", computer choice is "{comp_choice}", you win!')
     else:
         print(f'Your choice is "{user_choice}", computer choice is "{comp_choice}", you lose!')
@@ -72,7 +73,7 @@ while True:
         continue
 
     final_message()
-    score = (my_score())
+    score = (my_score(score))
 
     print('''\nScore Table:''')
     for name, res in score.items():
