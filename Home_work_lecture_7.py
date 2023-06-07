@@ -1,4 +1,20 @@
 from random import choice
+# "Rock! Paper! Scissors!"
+print('Welcome to the game "Rock! Paper! Scissors!"')
+print('''Here are the brief rules:
+    1.Enter one of three items (rock, paper, scissors)
+    2.Our computer will do the same
+    3.There are three possible outcomes: a draw, a win or a loss
+        in case of win or loss:
+            - rock crushes scissors
+            - paper covers the rock
+            - scissors cuts paper
+        in case of draw:
+            - player and computer pick the same items''')
+
+print('='*60)
+print()
+
                                         # Побудова функцій
 
 # якщо функція не приймає обов'язкових аргументів, чи маю я робити док стрінг з описом й що описувати в такому випадку?
@@ -46,6 +62,7 @@ def my_score(score):
     return score
 
 # якщо функція не приймає обов'язкових аргументів, чи маю я робити док стрінг з описом й що описувати в такому випадку?
+
 def final_message():
     if my_choice(user_choice, comp_choice) == 'Draw':
         print(f'Your choice "{user_choice}" == computer choice "{comp_choice}", it`s a draw!')
