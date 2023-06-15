@@ -1,4 +1,6 @@
 from time import perf_counter
+from functools import wraps
+
 
 print('Task_1')
 #Task1:
@@ -9,7 +11,8 @@ print('Task_1')
 
 def func_time(func):
 
-    def inner(*args, **kwargs):
+    @wraps(func)                                 # --> func.__name__ == my_age.__name__
+    def inner(*args, **kwargs):                      # func.__doc__ == my_age.__doc__
         start = perf_counter()
         func(*args, **kwargs)
         print(f'\nFunction "{func.__name__}" execution time is {(perf_counter() - start):.10f}')
