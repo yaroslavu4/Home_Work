@@ -11,8 +11,8 @@ print('Task_1')
 
 def func_time(func):
 
-    @wraps(func)                                 # --> func.__name__ == my_age.__name__
-    def inner(*args, **kwargs):                      # func.__doc__ == my_age.__doc__
+    @wraps(func)                                 # --> inner.__name__ == func.__name__
+    def inner(*args, **kwargs):                      # inner.__doc__ == func.__doc__
         start = perf_counter()
         func(*args, **kwargs)
         print(f'\nFunction "{func.__name__}" execution time is {(perf_counter() - start):.10f}')
