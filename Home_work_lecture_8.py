@@ -20,7 +20,15 @@ def func_time(func):
                                         # побудова функцій
 
 
-def my_years(age):
+def my_years(age: int):
+    '''
+    returns string according to age`s value
+    Args:
+        age: (int)
+
+    Returns:
+        years: (str)
+    '''
     years = ''
     if 2 <= age % 10 <= 4:
         years = 'роки'
@@ -32,7 +40,14 @@ def my_years(age):
 
 
 @func_time
-def my_age(age):
+def my_age(age: int):
+    '''
+    prints the message depending on value of age
+    Args:
+        age: (int)
+
+    Returns:
+    '''
     if age <= 0 or age > 105:
         print(f'Вам {age} {my_years(age)}, ви взагалі людина?')
     elif age < 7:
