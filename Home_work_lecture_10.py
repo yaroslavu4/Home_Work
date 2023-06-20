@@ -36,7 +36,6 @@ class Car(Vehicle):
 
 class Plane(Car, Vehicle):
     name = 'Plane'
-    wings = 2
     engine = 2
 
 
