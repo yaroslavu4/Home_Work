@@ -30,7 +30,7 @@ class Car(Vehicle):
     engine = 1
 
     def vehicle_specifics(self):
-        res = f'. Your {self.name.lower()} also has "{self.wheels}" wheels and "{self.engine}" engine(s)'
+        res = f'. Your "{self.name.lower()}" also has "{self.wheels}" wheels and "{self.engine}" engine(s)'
         return res
 
 
