@@ -34,12 +34,12 @@ class Car(Vehicle):
         return res
 
 
-class Plane(Car, Vehicle):
+class Plane(Car):
     name = 'Plane'
     engine = 2
 
 
-class Boat(Car, Vehicle):
+class Boat(Car):
     name = 'Boat'
     engine = 1
 
