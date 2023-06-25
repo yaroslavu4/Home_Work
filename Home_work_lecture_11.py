@@ -80,16 +80,16 @@ class Triangle:
     def __init__(self, a, b, c):
         self.a_side = a
         self.b_side = b
-        self.b_side = c
+        self.c_side = c
         if not all(isinstance(i, Line) for i in (a, b, c)):  # перевірка на тип Line
             print('Wrong class!')
             raise TypeError
 
     def triangle_square(self):
-        p = (self.a_side.length() + self.b_side.length() + self.b_side.length()) / 2
-        square = pow((p * (p - self.a_side.length()) * (p - self.b_side.length()) * (p - self.b_side.length())), 0.5)
+        p = (self.a_side.length() + self.b_side.length() + self.c_side.length()) / 2
+        square = pow((p * (p - self.a_side.length()) * (p - self.b_side.length()) * (p - self.c_side.length())), 0.5)
         return square
-        # тут не розумію як класс Трикутник знайшов метод length() класу Лінія просто через крапку, без наслідування
+
 
     def __str__(self):
         return f'Desired perimeter is "{self.triangle_square()}"'
