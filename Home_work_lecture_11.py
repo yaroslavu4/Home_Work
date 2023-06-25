@@ -16,7 +16,7 @@ class Point:
         self.x_coord = x
         self.y_coord = y
         if type(self.x_coord) not in (int, float) and type(self.y_coord) not in (int, float):  # перевірка на тип
-            print('Use type " int or float " only!!!')                                         # float, int
+            print('Use type " int or float " only!!!')  # float, int
             raise TypeError
 
     def __str__(self):
@@ -89,7 +89,6 @@ class Triangle:
         p = (self.a_side.length() + self.b_side.length() + self.c_side.length()) / 2
         square = pow((p * (p - self.a_side.length()) * (p - self.b_side.length()) * (p - self.c_side.length())), 0.5)
         return square
-
 
     def __str__(self):
         return f'Desired perimeter is "{self.triangle_square()}"'
