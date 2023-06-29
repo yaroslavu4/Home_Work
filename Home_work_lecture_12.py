@@ -118,8 +118,9 @@ class Triangle:
         self.iter_current += 1
         if self.iter_current >= self.iter_max:
             raise StopIteration
-        return str(self.my_tuple[self.iter_current].begin_point), str(self.my_tuple[self.iter_current].end_point)
-        # повертаю кортеж з 2 точок, бо атрибутами класу Trianle у минулому ДЗ я зробив лінії а не точки :(
+        else:
+            return str(self.my_tuple[self.iter_current].begin_point), str(self.my_tuple[self.iter_current].end_point)
+            # повертаю кортеж з 2 точок, бо атрибутами класу Trianle у минулому ДЗ я зробив лінії а не точки :(
 
 
 p1 = Point(0, 7)
@@ -141,6 +142,8 @@ print(line3.length)
 triangle = Triangle(line1, line2, line3)
 print(triangle)
 
+
+print('\nЛекція 12 ДЗ:')
 # Через те, що у классі Triangle атрибутами я зробив лінії а не точки, довелося трішки 'намудрити' аби обійти саме
 # вершини трикутника
 
