@@ -148,15 +148,13 @@ print('\nЛекція 12 ДЗ:')
 # вершини трикутника
 
 print('Вершини трикутника:')
-var_point = 1
+
 for i in triangle:
-    if var_point % 2 != 0:
-        print(i[0])
-    else:
-        print(i[1])
+    print(i[0])
 
 #===========================#
 # Перевірки
+print('\nПеревірки')
 line4 = Line(p1, p2)
 print(line4.begin_point)
 print(line4.end_point)
